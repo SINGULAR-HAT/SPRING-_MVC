@@ -14,6 +14,15 @@ public class Employee {
     private String email;
     private int age;
     private int salary;
+    private String test;
+
+    public String getTest() {
+        return test;
+    }
+
+    public void setTest(String test) {
+        this.test = test;
+    }
 
     public long getId() {
         return id;

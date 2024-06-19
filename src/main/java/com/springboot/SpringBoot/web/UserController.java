@@ -21,7 +21,8 @@ public class UserController {
     }
 
     @GetMapping("/User")
-    public String viewHomePage(Model model) {
+    public String viewHomePage(Model model)
+    {
         model.addAttribute("allUserList", userService.getAllUser());
         return "userindex";
     }
@@ -38,6 +39,9 @@ public class UserController {
         userService.save(user);
         return "redirect:/User";
     }
+
+    @PostMapping("/test")
+    public String tester()
 
     @GetMapping("/showFormForUpdateuser/{id}")
     public String updateForm(@PathVariable(value = "id") long id, Model model) {
